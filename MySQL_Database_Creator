@@ -1,0 +1,68 @@
+/****************************************************
+MySQL Database Setup Code
+
+Copy and Paste all of this code into a mysql> command line
+interface to create all the tables required for our 
+database. You are required to create a database file first,
+and have entered the database using the show 'use databasename' 
+command.
+*****************************************************/
+
+
+/* The lines below remove the tables if they already exist */
+DROP TABLE IF EXISTS Publications;
+DROP TABLE IF EXISTS Publications_Linker;
+DROP TABLE IF EXISTS Student_Linker;
+DROP Table IF EXISTS Users;
+
+
+/* The CREATE TABLE commands add the tables to the database with the appropriate fields. */
+CREATE TABLE IF NOT EXISTS Users 
+(
+  P_Id int NOT NULL AUTO_INCREMENT,
+	Last_Name varchar(255) NOT NULL,
+	First_Name varchar(255) NOT NULL,
+	Office varchar(255),
+	Phone_Number varchar(13),
+	Research_Description text,
+	Researcher_Type varchar(255),
+	Username varchar(255) NOT NULL,
+	Password CHAR(32),
+	Email_Address varchar(255) NOT NULL,
+	PRIMARY KEY (P_Id)
+);
+
+CREATE TABLE IF NOT EXISTS Student_Linker 
+(
+	StuLink_ID int NOT NULL AUTO_INCREMENT,
+	Academic_Id int NOT NULL,
+	Student_Id int NOT NULL,
+	PRIMARY KEY (StuLink_ID)
+);
+
+CREATE TABLE IF NOT EXISTS Publications
+(
+	Pub_Id int NOT NULL AUTO_INCREMENT,
+	Title varchar(255) NOT NULL,
+	External_Link varchar(255),
+	Type varchar(255),
+	PRIMARY KEY (Pub_Id)
+);
+
+CREATE TABLE IF NOT EXISTS Publications_Linker
+(
+	PubLink_ID int NOT NULL AUTO_INCREMENT,
+	Author_Id int NOT NULL,
+	Pub_Id int NOT NULL,
+	PRIMARY KEY (PubLink_ID)
+);
+
+/* Some dummy data is added to the database for test purposes */
+INSERT INTO Users
+VALUES (0,'Willis','James','East Office','07772263602',
+'My research is into database design, it is very advanced and is much more complicated that html design.', 
+'PhD Student','jamster321','','jamster321@gmail.com');
+
+INSERT INTO Users
+VALUES (0,'Clarke','Graham','West Office','07772263602',
+'','PhD Student','','','');

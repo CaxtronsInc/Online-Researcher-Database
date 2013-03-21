@@ -10,11 +10,13 @@ command.
 
 
 /* The lines below remove the tables if they already exist */
-DROP TABLE Publications;
-DROP TABLE Publications_Linker;
-DROP TABLE Student_Linker;
-DROP Table Users;
+DROP TABLE IF EXISTS Publications;
+DROP TABLE IF EXISTS Publications_Linker;
+DROP TABLE IF EXISTS Student_Linker;
+DROP Table IF EXISTS Users;
 
+
+/* The CREATE TABLE commands add the tables to the database with the appropriate fields. */
 CREATE TABLE IF NOT EXISTS Users 
 (
   P_Id int NOT NULL AUTO_INCREMENT,
@@ -55,6 +57,7 @@ CREATE TABLE IF NOT EXISTS Publications_Linker
 	PRIMARY KEY (PubLink_ID)
 );
 
+/* Some dummy data is added to the database for test purposes */
 INSERT INTO Users
 VALUES (0,'Willis','James','East Office','07772263602',
 'My research is into database design, it is very advanced and is much more complicated that html design.', 

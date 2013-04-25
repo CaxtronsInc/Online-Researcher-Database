@@ -57,12 +57,32 @@ CREATE TABLE IF NOT EXISTS Publications_Linker
 	PRIMARY KEY (PubLink_ID)
 );
 
+
+
 /* Some dummy data is added to the database for test purposes */
 INSERT INTO Users
 VALUES (0,'Willis','James','East Office','07772263602',
-'My research is into database design, it is very advanced and is much more complicated that html design.', 
-'PhD Student','jamster321','','jamster321@gmail.com');
+'My research is into database design, it is very advanced and is much more complicated that html design.',
+'PhD Student','jamster321','jamster321','jamster321@gmail.com');
 
 INSERT INTO Users
-VALUES (0,'Clarke','Graham','West Office','07772263602',
-'','PhD Student','','','');
+VALUES (0,'Clarke','Graham','West Office','01234567890',
+'','PhD Student','niaekralc','','g.clarke@surrey.com');
+
+INSERT INTO Users
+VALUES (0,'Odiadi','Austin','West Office','01234567890',
+'','PhD Student','CaxtronsInc','','a.odiadi@surrey.com');
+
+INSERT INTO Users
+VALUES (0,'Dean','James','LA Office','01234567890',
+'','Actor','deany123','','j.dean@surrey.com');
+
+INSERT INTO Users
+VALUES (0,'Sanidiotis','Yiannos','East Office','01234567890',
+'',
+'PhD Student','yanisani','','y.sanidiotis@surrey.com');
+
+INSERT INTO Users
+VALUES (0,'Emerson','Neil','Main Office','01234567890',
+'',
+'Academic','emerson100','','n.emerson@surrey.com');

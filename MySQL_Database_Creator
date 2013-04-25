@@ -82,7 +82,7 @@ VALUES (0,'Sanidiotis','Yiannos','East Office','01234567890',
 
 INSERT INTO Users
 VALUES (0,'Emerson','Neil','Main Office','01234567890',
-'I'm in charge of everything.',
+'Im in charge of everything.',
 'Academic','emerson100',MD5('emerson100'),'n.emerson@surrey.com');
 
 INSERT INTO Users
@@ -95,5 +95,3 @@ VALUES (0,'Discoveries in Time','1234','Journal');
 
 INSERT INTO Publications_Linker
 VALUES (0,1,1);
-
-new

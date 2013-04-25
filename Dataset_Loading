@@ -5,3 +5,12 @@ The following commands can be used to load different
 dataset from the database.
 *****************************************************/
 
+
+/* Users and their Publications */
+SELECT Users.Last_Name, Users.First_Name, Publications.Title, Publications.Type 
+FROM Users 
+INNER JOIN Publications_Linker
+ON Users.P_Id = Publications_Linker.Author_Id
+INNER JOIN Publications
+ON Publications_Linker.Pub_Id = Publications.Pub_Id
+ORDER BY Users.Last_Name

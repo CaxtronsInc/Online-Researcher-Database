@@ -13,4 +13,4 @@ INNER JOIN Publications_Linker
 ON Users.P_Id = Publications_Linker.Author_Id
 INNER JOIN Publications
 ON Publications_Linker.Pub_Id = Publications.Pub_Id
-ORDER BY Users.Last_Name
+ORDER BY Users.Last_Name;

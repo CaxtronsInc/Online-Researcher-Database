@@ -63,29 +63,29 @@ CREATE TABLE IF NOT EXISTS Publications_Linker
 INSERT INTO Users
 VALUES (0,'Willis','James','East Office','07772263602',
 'My research is into database design.',
-'PhD Student','jamster321','jamster321','jamster321@gmail.com');
+'PhD Student','jamster321',MD5('jamster321'),'jamster321@gmail.com');
 
 INSERT INTO Users
 VALUES (0,'Clarke','Graham','West Office','01234567890',
 'I like running.',
-'PhD Student','niaekralc',MD5('code'),'g.clarke@surrey.com');
+'PhD Student','niaekralc',MD5('niaekralc'),'g.clarke@surrey.com');
 
 INSERT INTO Users
 VALUES (0,'Odiadi','Austin','West Office','01234567890',
 'I like html website design',
-'PhD Student','CaxtronsInc','','a.odiadi@surrey.com');
+'PhD Student','caxtronsinc',MD5('caxtronsinc'),'a.odiadi@surrey.com');
 
 INSERT INTO Users
 VALUES (0,'Sanidiotis','Yiannos','East Office','01234567890',
 'I like PHP Development',
-'PhD Student','yanisani','','y.sanidiotis@surrey.com');
+'PhD Student','yanisani',MD5('yanisani'),'y.sanidiotis@surrey.com');
 
 INSERT INTO Users
 VALUES (0,'Emerson','Neil','Main Office','01234567890',
 'I'm in charge of everything.',
-'Academic','emerson100','','n.emerson@surrey.com');
+'Academic','emerson100',MD5('emerson100'),'n.emerson@surrey.com');
 
 INSERT INTO Users
 VALUES (0,'Dean','James','LA Office','01234567890',
 'Dream as if you'll live forever. Live as if you'll die today.',
-'Actor','deany123',MD5('camera'),'j.dean@surrey.com');
+'Actor','deany123',MD5('deany123'),'j.dean@surrey.com');

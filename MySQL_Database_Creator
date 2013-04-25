@@ -68,7 +68,7 @@ VALUES (0,'Willis','James','East Office','07772263602',
 INSERT INTO Users
 VALUES (0,'Clarke','Graham','West Office','01234567890',
 '',
-'PhD Student','niaekralc','','g.clarke@surrey.com');
+'PhD Student','niaekralc',MD5('code'),'g.clarke@surrey.com');
 
 INSERT INTO Users
 VALUES (0,'Odiadi','Austin','West Office','01234567890',

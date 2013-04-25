@@ -14,3 +14,12 @@ ON Users.P_Id = Publications_Linker.Author_Id
 INNER JOIN Publications
 ON Publications_Linker.Pub_Id = Publications.Pub_Id
 ORDER BY Users.Last_Name;
+
+/* Adademics and their Students */
+SELECT ACA.Last_Name, ACA.First_Name, STU.Last_Name, STU.First_Name
+FROM Users AS ACA
+INNER JOIN Student_Linker
+ON ACA.P_Id = Student_Linker.Academic_Id
+INNER JOIN Users AS STU
+ON Student_Linker.Student_Id = STU.P_Id
+ORDER BY ACA.Last_Name;

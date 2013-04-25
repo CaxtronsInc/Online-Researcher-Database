@@ -91,7 +91,19 @@ VALUES (0,'Dean','James','LA Office','01234567890',
 'Actor','deany123',MD5('deany123'),'j.dean@surrey.com');
 
 INSERT INTO Publications
-VALUES (0,'Discoveries in Time','1234','Journal');
+VALUES (0,'Discoveries in Time','0001','Journal');
+
+INSERT INTO Publications
+VALUES (0,'My Boring Walk Home','0002','Short Story');
 
 INSERT INTO Publications_Linker
 VALUES (0,1,1);
+
+INSERT INTO Publications_Linker
+VALUES (0,2,1);
+
+INSERT INTO Publications_Linker
+VALUES (0,3,1);
+
+INSERT INTO Publications_Linker
+VALUES (0,5,2);

@@ -89,3 +89,9 @@ INSERT INTO Users
 VALUES (0,'Dean','James','LA Office','01234567890',
 'Dream as if you'll live forever. Live as if you'll die today.',
 'Actor','deany123',MD5('deany123'),'j.dean@surrey.com');
+
+INSERT INTO Publications
+VALUES (0,'Discoveries in Time','1234','Journal');
+
+INSERT INTO Publications_Linker
+VALUES (0,1,1);

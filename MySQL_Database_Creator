@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS Publications_Linker
 /* Some dummy data is added to the database for test purposes */
 INSERT INTO Users
 VALUES (0,'Willis','James','East Office','07772263602',
-'My research is into database design, it is very advanced and is much more complicated that html design.',
+'My research is into database design.',
 'PhD Student','jamster321','jamster321','jamster321@gmail.com');
 
 INSERT INTO Users

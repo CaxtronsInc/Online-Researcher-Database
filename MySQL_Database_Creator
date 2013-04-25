@@ -19,7 +19,7 @@ DROP Table IF EXISTS Users;
 /* The CREATE TABLE commands add the tables to the database with the appropriate fields. */
 CREATE TABLE IF NOT EXISTS Users 
 (
-  P_Id int NOT NULL AUTO_INCREMENT,
+  	P_Id int NOT NULL AUTO_INCREMENT,
 	Last_Name varchar(255) NOT NULL,
 	First_Name varchar(255) NOT NULL,
 	Office varchar(255),

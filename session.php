@@ -4,9 +4,11 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
+$expiry = (5 * 60);  	//seconds till expiry
+
 $now = time(); //current time
 
-$limit = $now - (5 * 60);  //seconds till expiry
+$limit = $now - $expiry;	
 
 // check the time of the last activity
 if (isset ($_SESSION['last_activity']) && $_SESSION['last_activity'] < $limit) {
@@ -17,4 +19,6 @@ if (isset ($_SESSION['last_activity']) && $_SESSION['last_activity'] < $limit) {
   // otherwise, set the value to the current time
   $_SESSION['last_activity'] = $now;
 }
+echo "<meta http-equiv=\"refresh\" content=\"".($expiry+1)."\">"
 ?>
+

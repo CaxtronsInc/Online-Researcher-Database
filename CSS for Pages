@@ -1,0 +1,54 @@
+body {
+background-color:blue;
+background-image:url('Background-BluetoWhite.jpg');
+background-repeat:no-repeat;
+background-position:top center;
+background-size:1860px 1100px;
+}
+h1 {
+text-align:center;
+color:black;
+!background-color:purple;
+font:normal bold 80px/30px Arial, serif;
+font-size-adjust: 0.58;
+} 
+
+h2{
+text-align: center;
+color:black;
+font-size : 80%
+}
+
+h3 {
+text-align: center;
+color:black;
+!background-color:purple;
+font:normal bold 50px/30px Arial, serif;
+font-size-adjust: 0.58;
+} 
+
+h4{
+text-align: left;
+color:black;
+font:normal bold 15px/20px Arial, serif;
+}
+
+p {
+color:white;
+!background-color:orange;
+font-size : 80%
+}
+
+h5 {
+text-align:right;
+color: green;
+}
+
+cite {
+color:blue;
+background-color:red;
+}
+address {
+color:orange;
+background-color:red;
+}

@@ -1,3 +1,4 @@
+<?php require 'session.php' ?>
 <!DOCTYPE html>
 <html>
 
@@ -6,21 +7,9 @@
 <!--external link to change the colors,size, and anything that has to do with style-->
 </head>
 <body>
-<h1> Website</h1>
-
-<table border="0" cellpadding= "10", align= "center">
-<tr>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Administrator</a></h4></td>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Browse</a></h4></td>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Reports</a></h4></td>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Profile</a></h4></td>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Contact us</a></h></td>
-<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Sign-out</a></h4></td>
-</tr>
-</table> 
 <?php
-
 require 'DBconnection.php';
+include 'menu.php';
 
 $noresults = 0;
 
@@ -113,7 +102,7 @@ else
 				$editaddress =  "edit_item.php?edit_item=" . $row['P_Id'];
 				$deleteaddress = "search_results.php?search_value=" . $searchvalue . "&filter=" . $filter . "&delete_item=" . $row['P_Id'];
 				echo "<tr>";
-				echo "<td><a href=" . $address . ">" . $row['Last_Name'] . ", " . $row['First_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td><a href=" . $emailaddress . ">" . $row['Email_Address'] . "</a></td>" . "<td><a href=" . $editaddress . "><img src=" . $edit_url . "></a></td>" . "<td><a href=" . $deleteaddress . " OnClick=\"return confirm('Are you sure?');\"><img src=" . $trash_url . "></a></td>";
+				echo "<td><a href=" . $address . " >" . $row['Last_Name'] . ", " . $row['First_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td><a href=" . $emailaddress . ">" . $row['Email_Address'] . "</a></td>" . "<td><a href=" . $editaddress . "><img src=" . $edit_url . "></a></td>" . "<td><a href=" . $deleteaddress . " OnClick=\"return confirm('Are you sure?');\"><img src=" . $trash_url . "></a></td>";
 			}
 			echo "</table>";
 			echo "<br>";

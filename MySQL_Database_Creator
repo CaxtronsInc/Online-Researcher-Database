@@ -20,6 +20,7 @@ DROP Table IF EXISTS Users;
 CREATE TABLE IF NOT EXISTS Users 
 (
   	P_Id int NOT NULL AUTO_INCREMENT,
+	User_Level int NOT NULL,
 	Last_Name varchar(255) NOT NULL,
 	First_Name varchar(255) NOT NULL,
 	Office varchar(255),

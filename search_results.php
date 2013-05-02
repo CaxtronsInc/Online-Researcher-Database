@@ -20,7 +20,7 @@ $filter = $_GET["filter"];
 
 ?>
 
-<form name="input" action="database.php" method="GET">
+<form name="input" action="search_results.php" method="GET">
 
 <h2>Search: <input type="text" name="search_value" size="90" id="textField" style="background-image:url(filename.jpg)" value = <?php echo $searchvalue ?> >
 
@@ -39,7 +39,7 @@ $filter = $_GET["filter"];
 
 if (strlen($searchvalue) == 0)
 {
-	echo "<meta http-equiv=\"refresh\" content\0;URL='database.php'\">";
+	echo "<meta http-equiv=\"refresh\" content\0;URL='search_results.php'\">";
 }
 else
 {

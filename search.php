@@ -25,17 +25,15 @@
 <br>
 <h3> Our Research Database </h1>
 <br>
-<form name="input" action="html_form_action.asp" method="get">
-<h2>Search: <input type="text" name="Searchbox" size="90" id="textField" style="background-image:url(filename.jpg)"/>
-<select>
-  <option value="All Items">All Items</option>
-  <option value="All Users">All Users</option>
+<form name="input" action="database.php" method="GET">
+<h2>Search: <input type="text" name="search_value" size="90" id="textField" style="background-image:url(filename.jpg)"/>
+<select name="filter">
+  <option value="AllItems">All Items</option>
+  <option value="Users">Users</option>
   <option value="Publications">Publications</option>
-  <option value="Academics">Academics</option>
-  <option value="Supervisors">Supervisors</option>
 </select></h2>
 <br>
-<h2><input type="submit" value="Database Submit" size= "20"></h2>
+<h2><input type="submit" value="Submit" size= "20"></h2>
 </form> 
 </body>
 </html>

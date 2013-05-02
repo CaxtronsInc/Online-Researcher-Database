@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!--external link to change the colors,size, and anything that has to do with style-->
+</head>
+
+<body>
+<!--This comment will not be displayed-->
+<br>
+<h1> Our Research Database </h1>
+<br>
+<br>
+<table border="0" cellpadding="80" align="center">
+<tr>
+ <td><img src="Global Databestweb.jpg" width="500" height="500"></td>
+<br>
+</td>
+<td>
+<h2><b>Note:</b> Please Log-in or sign-up as a <a href="https://www.facebook.com/groups/284941464950352/" target="_blank">free user!</a></h2>
+<form action="">
+<h2>Username:<input type="text" name="user"></hr>
+<h2>Password : <input type="password" name="password"></h2>
+<h2><input type="checkbox" name="Sign in" value="Sign in">Keep me signed in<br></h2>
+<h2><input type="submit" value="Sign in"></h2>
+</form>
+<br>
+<h2><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Forgotten Password?</p1>
+<h2>Can't access your account?</a></h2>
+<h2><a href="http://www.youtube.com" target="_blank">Sign in with a single-use code</a></h2>
+</tr>
+</table>
+</body>
+</html>

@@ -1,61 +1,41 @@
-<?php
-require 'session.php';
-?>
-
+<!DOCTYPE html>
 <html>
 
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!--external link to change the colors,size, and anything that has to do with style-->
+</head>
 <body>
-
-<h1> Search Results </h1>
-<br>
-</body>
-
-<br>
-<?php
-echo $_SESSION['number'];
-// Create connection
-$con=mysqli_connect("localhost","root","","uni_database");
-
-// Check connection
-if (mysqli_connect_errno($con))
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}else{
-
-echo "<table border='1'>
+<table border="0" cellpadding= "10", align= "center">
 <tr>
-<th>Firstname</th>
-<th>Lastname</th>
-<th>Office</th>
-<th>Research Description</th>
-</tr>";
-
-
-
-$result = mysqli_query($con, "SELECT * from users");
-while($row = mysqli_fetch_array($result))
-{
-    echo "<tr>";
-    if ($row['First_Name'] == "Yiannos" )
-    {
-        echo "<td>" . $row['First_Name'] . "</td>" . "<td>" . $row['Last_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td>" . $row['Research_Description'] . "</td>" ;
-    }
-    echo "</tr>";
-    
-}
-echo "</table>";
-echo "<br /><br />Finished";
-// $username = $_POST['username'];
-// print ($username);
-
-}
-?>
-
-
-<!-- 
-<?php       //CLOSE CONNECTION
-    mysqli_close($con);
-    ?>
- -->
-    
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Administrator</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Browse</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Reports</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Profile</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Contact us</a></h></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Sign-out</a></h4></td>
+</tr>
+</table> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3> Our Research Database </h1>
+<br>
+<form name="input" action="html_form_action.asp" method="get">
+<h2>Search: <input type="text" name="Searchbox" size="90" id="textField" style="background-image:url(filename.jpg)"/>
+<select>
+  <option value="All Items">All Items</option>
+  <option value="All Users">All Users</option>
+  <option value="Publications">Publications</option>
+  <option value="Academics">Academics</option>
+  <option value="Supervisors">Supervisors</option>
+</select></h2>
+<br>
+<h2><input type="submit" value="Database Submit" size= "20"></h2>
+</form> 
+</body>
 </html>

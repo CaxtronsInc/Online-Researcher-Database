@@ -113,7 +113,7 @@ else
 				$editaddress =  "edit_item.php?edit_item=" . $row['P_Id'];
 				$deleteaddress = "search_results.php?search_value=" . $searchvalue . "&filter=" . $filter . "&delete_item=" . $row['P_Id'];
 				echo "<tr>";
-				echo "<td><a href=" . $address . ">" . $row['Last_Name'] . ", " . $row['First_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td><a href=" . $emailaddress . ">" . $row['Email_Address'] . "</a></td>" . "<td><a href=" . $editaddress . "><img src=" . $edit_url . "></a></td>" . "<td><a href=" . $deleteaddress . "><img src=" . $trash_url . "></a></td>";
+				echo "<td><a href=" . $address . ">" . $row['Last_Name'] . ", " . $row['First_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td><a href=" . $emailaddress . ">" . $row['Email_Address'] . "</a></td>" . "<td><a href=" . $editaddress . "><img src=" . $edit_url . "></a></td>" . "<td><a href=" . $deleteaddress . " OnClick=\"return confirm('Are you sure?');\"><img src=" . $trash_url . "></a></td>";
 			}
 			echo "</table>";
 			echo "<br>";

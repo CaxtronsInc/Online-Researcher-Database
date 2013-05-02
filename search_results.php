@@ -1,22 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!--external link to change the colors,size, and anything that has to do with style-->
+</head>
+<body>
 <h1> Website</h1>
 
+<table border="0" cellpadding= "10", align= "center">
+<tr>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Administrator</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Browse</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Reports</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Profile</a></h4></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Contact us</a></h></td>
+<td><h4><a href="http://www.youtube.com/watch?v=lRRUxAccoN0" target="_blank">Sign-out</a></h4></td>
+</tr>
+</table> 
 <?php
 
+require 'DBconnection.php';
 
 $noresults = 0;
 
-// Create connection
-$con=mysqli_connect("localhost","root","","uni_database");
-
-// Check connection
-if (mysqli_connect_errno($con))
+if (isset($_GET["delete_item"]) )
 {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+	$query_str = "DELETE FROM Users WHERE P_Id = " . $_GET["delete_item"];
+
+	mysqli_query($con, $query_str);
+	$query_str = 0;
 }
 
 $searchvalue = $_GET["search_value"];
 $filter = $_GET["filter"];
-
 
 ?>
 
@@ -79,19 +97,23 @@ else
 		{
 			echo "<table border='1'>
 			<tr>
-			<th>Firstname</th>
-			<th>Lastname</th>
+			<th>Name</th>
 			<th>Office</th>
-			<th>Research Description</th>
+			<th>Email</th>
 			</tr>";
 			
 			$address = "https://www.google.co.uk/";
+			$edit_url = "http://cdn1.iconfinder.com/data/icons/fatcow/32/bullet_edit.png";
+			$trash_url = "http://cdn1.iconfinder.com/data/icons/fatcow/32x32_0100/bin_closed.png";
 		
 			
 			while($row = mysqli_fetch_array($result))
 			{
+				$emailaddress = "mailto:" . $row['Email_Address'] ;
+				$editaddress =  "edit_item.php?edit_item=" . $row['P_Id'];
+				$deleteaddress = "search_results.php?search_value=" . $searchvalue . "&filter=" . $filter . "&delete_item=" . $row['P_Id'];
 				echo "<tr>";
-				echo "<td><a href=" . $address . ">" . $row['Last_Name'] . ", " . $row['First_Name'] .  "</a><br><small>" . $row['Office'] . "</small></td>" . "<td>" . $row['Last_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td>" . $row['Research_Description'] . "</td>" ;
+				echo "<td><a href=" . $address . ">" . $row['Last_Name'] . ", " . $row['First_Name'] . "</td>" . "<td>" . $row['Office'] . "</td>" . "<td><a href=" . $emailaddress . ">" . $row['Email_Address'] . "</a></td>" . "<td><a href=" . $editaddress . "><img src=" . $edit_url . "></a></td>" . "<td><a href=" . $deleteaddress . "><img src=" . $trash_url . "></a></td>";
 			}
 			echo "</table>";
 			echo "<br>";
@@ -154,11 +176,6 @@ else
 			}
 		}
 	}
-
-
-	echo "<br /><br />Finished";
-	// $username = $_POST['username'];
-	// print ($username);
 }
 
 ?>
@@ -167,3 +184,6 @@ else
 <?php       //CLOSE CONNECTION
     mysqli_close($con);
     ?>
+	
+</body>
+</html>

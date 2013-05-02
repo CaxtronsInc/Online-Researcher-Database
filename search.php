@@ -25,7 +25,7 @@
 <br>
 <h3> Our Research Database </h1>
 <br>
-<form name="input" action="database.php" method="GET">
+<form name="input" action="search_results.php" method="GET">
 <h2>Search: <input type="text" name="search_value" size="90" id="textField" style="background-image:url(filename.jpg)"/>
 <select name="filter">
   <option value="AllItems">All Items</option>

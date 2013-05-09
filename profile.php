@@ -16,7 +16,7 @@ require 'DBconnection.php';
 include 'menu.php';
 
 if ( isset($_GET['user_id']) ){
-  $user_id = $_GET['user_id'];
+	$user_id = $_GET['user_id'];
 }else 
 	{
 		$user_id = $_SESSION['ID'];
@@ -59,6 +59,7 @@ if ( isset($_GET['user_id']) ){
 		WHERE ACA.P_Id = " . $user_id . " ORDER BY STU.Last_Name");
 		}
 ?>
+
 <table border="0" cellpadding="3" cellspacing="0" align="left" width = "1000">
 <tr>
  <td width="50%" align="left">
